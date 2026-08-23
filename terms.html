@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Imposter: Infiltrator Game</title>
+  <meta name="description" content="Official Terms of Service for Imposter: Infiltrator Game published by FriendSlop Studios.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-gradient: radial-gradient(circle at 50% 0%, #151d30 0%, #090d16 100%);
+      --bg: #090d16;
+      --card-bg: rgba(22, 30, 48, 0.75);
+      --card-border: rgba(77, 214, 237, 0.18);
+      --card-hover-border: rgba(77, 214, 237, 0.35);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.25);
+      --accent: #f43f5e;
+      --gold: #fbbf24;
+      --gold-bg: rgba(251, 191, 36, 0.1);
+      --line: rgba(148, 163, 184, 0.12);
+      --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      background-image: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      font-size: 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container { width: 100%; max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    header { padding: 60px 0 32px; text-align: center; }
+
+    .badge-wrap {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.25);
+      padding: 6px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: 700;
+      color: #fda4af; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px;
+    }
+
+    .badge-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 10px var(--accent); }
+
+    h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; color: #ffffff; margin-bottom: 12px; }
+    .subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 24px; }
+
+    .meta-bar {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+      font-size: 0.9rem; color: var(--text-dim); margin-bottom: 28px;
+    }
+
+    .meta-bar a { color: var(--primary); text-decoration: none; }
+    .meta-bar a:hover { text-decoration: underline; }
+
+    .nav-bar {
+      background: var(--card-bg); backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border); border-radius: 16px; padding: 8px;
+      display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      gap: 6px; margin-bottom: 40px; box-shadow: var(--shadow); position: sticky; top: 16px; z-index: 100;
+    }
+
+    .nav-btn {
+      background: transparent; border: 1px solid transparent; color: var(--text-muted);
+      padding: 8px 16px; border-radius: 10px; font-size: 0.88rem; font-weight: 600;
+      cursor: pointer; text-decoration: none; transition: all 0.2s ease; font-family: inherit;
+    }
+
+    .nav-btn:hover { color: var(--text-main); background: rgba(255, 255, 255, 0.05); }
+
+    .nav-btn.active {
+      background: var(--primary); color: #090d16; font-weight: 700; border-color: var(--primary);
+    }
+
+    .nav-btn.privacy-link {
+      background: rgba(56, 189, 248, 0.12); color: #7dd3fc; border-color: rgba(56, 189, 248, 0.25);
+    }
+
+    .card {
+      background: var(--card-bg); backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border); border-radius: 20px; padding: 32px;
+      margin-bottom: 24px; box-shadow: var(--shadow);
+    }
+
+    .card-title {
+      font-size: 1.35rem; font-weight: 700; color: #ffffff;
+      display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+      padding-bottom: 12px; border-bottom: 1px solid var(--line);
+    }
+
+    .card-title-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; background: rgba(244, 63, 94, 0.12); border-radius: 10px; font-size: 1.15rem;
+    }
+
+    p { margin-bottom: 16px; color: var(--text-main); }
+    p:last-child { margin-bottom: 0; }
+    ul { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 12px; }
+    li { position: relative; padding-left: 28px; color: var(--text-main); }
+    li::before { content: "•"; color: var(--accent); position: absolute; left: 10px; font-size: 1.4rem; line-height: 1; top: -2px; }
+    strong { color: #ffffff; font-weight: 700; }
+
+    .gold-box {
+      background: var(--gold-bg); border: 1px solid rgba(251, 191, 36, 0.28);
+      border-radius: 14px; padding: 18px 22px; margin: 20px 0; font-size: 0.95rem; color: #fef3c7;
+    }
+
+    footer {
+      margin-top: auto; background: rgba(11, 17, 31, 0.9); border-top: 1px solid var(--line);
+      padding: 36px 0; text-align: center; font-size: 0.88rem; color: var(--text-dim);
+    }
+
+    .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--primary); }
+
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <header class="container">
+    <div class="badge-wrap">
+      <span class="badge-dot"></span>
+      Terms of Service
+    </div>
+    <h1>Terms of Service</h1>
+    <p class="subtitle"><strong>Imposter: Infiltrator Game</strong></p>
+    <div class="meta-bar">
+      <span>🏢 <strong>Publisher:</strong> FriendSlop Studios</span>
+      <span>📅 <strong>Effective Date:</strong> August 21, 2026</span>
+      <span>✉️ <strong>Support:</strong> <a href="mailto:friendslopstudiossupport@gmail.com">friendslopstudiossupport@gmail.com</a></span>
+    </div>
+
+    <nav class="nav-bar" aria-label="Language & Terms Navigation">
+      <button class="nav-btn active" onclick="setLang('en')">English</button>
+      <button class="nav-btn" onclick="setLang('es')">Español</button>
+      <button class="nav-btn" onclick="setLang('fr')">Français</button>
+      <button class="nav-btn" onclick="setLang('de')">Deutsch</button>
+      <button class="nav-btn" onclick="setLang('pt-br')">Português (BR)</button>
+      <a class="nav-btn privacy-link" href="index.html">← Privacy Policy</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section id="en" class="lang-section active" lang="en">
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">📜</span> 1. Acceptance & Age Requirements</h2>
+        <p>By downloading, installing, or playing <strong>Imposter: Infiltrator Game</strong>, you agree to these Terms. You must be at least <strong>13 years of age</strong> to use this application. If you do not meet this age requirement or do not agree with these Terms, do not install or use the app.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">🎮</span> 2. License & Game Content</h2>
+        <p>FriendSlop Studios grants you a personal, non-exclusive, non-transferable, revocable license to use the game for personal, non-commercial entertainment. You agree not to reverse engineer, copy, distribute, modify, or exploit the game's source code, assets, artwork, or game packs without express written permission.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">✏️</span> 3. User-Generated Content & Conduct</h2>
+        <p>When creating custom word packs or entering player names, you agree not to submit content that is defamatory, hateful, abusive, sexually explicit, or infringing upon intellectual property rights. You are solely responsible for local custom content created on your device.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">💎</span> 4. In-App Purchases & Advertising</h2>
+        <p>Optional in-app purchases (such as the Lifetime Premium Unlock) are billed through <strong>Google Play</strong> and are subject to Google Play Terms of Service. In-game credits earned via rewarded ads are virtual, non-transferable, and possess no real-world monetary value.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">⚖️</span> 5. Disclaimers & Limitation of Liability</h2>
+        <p>The game is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. FriendSlop Studios will not be liable for any indirect, incidental, or consequential damages resulting from your use of the application.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">✉️</span> 6. Contact Information</h2>
+        <p>For questions or support regarding these Terms:</p>
+        <div class="gold-box">
+          <strong>FriendSlop Studios</strong><br>
+          Email: <a href="mailto:friendslopstudiossupport@gmail.com" style="color: inherit; font-weight: 700;">friendslopstudiossupport@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="es" class="lang-section" lang="es">
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">📜</span> Términos de Servicio (Español)</h2>
+        <p>Puedes usar el juego para entretenimiento personal si tienes al menos 13 años. No introduzcas contenido ilegal o abusivo en paquetes personalizados. Las compras prémium se procesan mediante Google Play. Contacto: friendslopstudiossupport@gmail.com</p>
+      </div>
+    </section>
+
+    <section id="fr" class="lang-section" lang="fr">
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">📜</span> Conditions d'Utilisation (Français)</h2>
+        <p>Vous pouvez utiliser le jeu à titre personnel si vous avez au moins 13 ans. N'ajoutez aucun contenu illégal dans les packs personnalisés. Les achats intégrés sont gérés par Google Play. Contact : friendslopstudiossupport@gmail.com</p>
+      </div>
+    </section>
+
+    <section id="de" class="lang-section" lang="de">
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">📜</span> Nutzungsbedingungen (Deutsch)</h2>
+        <p>Sie dürfen das Spiel ab 13 Jahren zur persönlichen Unterhaltung nutzen. Eigene Inhalte dürfen nicht rechtswidrig sein. Käufe werden über Google Play abgewickelt. Kontakt: friendslopstudiossupport@gmail.com</p>
+      </div>
+    </section>
+
+    <section id="pt-br" class="lang-section" lang="pt-BR">
+      <div class="card">
+        <h2 class="card-title"><span class="card-title-icon">📜</span> Termos de Serviço (Português Brasil)</h2>
+        <p>Você pode usar o jogo para entretenimento pessoal a partir dos 13 anos. Não insira conteúdos ilegais ou abusivos. Compras são processadas pelo Google Play. Contato: friendslopstudiossupport@gmail.com</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Privacy Policy</a>
+        <span>·</span>
+        <a href="terms.html">Terms of Service</a>
+        <span>·</span>
+        <a href="mailto:friendslopstudiossupport@gmail.com">Contact Support</a>
+      </div>
+      <p>© 2026 FriendSlop Studios. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(langCode) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        if (!btn.classList.contains('privacy-link')) {
+          btn.classList.remove('active');
+        }
+      });
+      const target = document.getElementById(langCode);
+      if (target) target.classList.add('active');
+      const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick')?.includes(langCode));
+      if (activeBtn) activeBtn.classList.add('active');
+      window.location.hash = langCode;
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && document.getElementById(hash)) setLang(hash);
+    });
+  </script>
+</body>
+</html>
