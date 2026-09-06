@@ -1,400 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service — Imposter: Infiltrator Game</title>
-  <meta name="description" content="Official Terms of Service for Imposter: Infiltrator Game published by FriendSlop Studios.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --bg-gradient: radial-gradient(circle at 50% 0%, #151d30 0%, #090d16 100%);
-      --bg: #090d16;
-      --card-bg: rgba(22, 30, 48, 0.75);
-      --card-border: rgba(77, 214, 237, 0.18);
-      --card-hover-border: rgba(77, 214, 237, 0.35);
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
-      --primary: #38bdf8;
-      --primary-glow: rgba(56, 189, 248, 0.25);
-      --accent: #f43f5e;
-      --gold: #fbbf24;
-      --gold-bg: rgba(251, 191, 36, 0.1);
-      --line: rgba(148, 163, 184, 0.12);
-      --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--bg);
-      background-image: var(--bg-gradient);
-      background-attachment: fixed;
-      color: var(--text-main);
-      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
-      font-size: 16px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .container { width: 100%; max-width: 880px; margin: 0 auto; padding: 0 24px; }
-
-    header { padding: 60px 0 32px; text-align: center; }
-
-    .badge-wrap {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.25);
-      padding: 6px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: 700;
-      color: #fda4af; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px;
-    }
-
-    .badge-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 10px var(--accent); }
-
-    h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; color: #ffffff; margin-bottom: 12px; }
-    .subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 24px; }
-
-    .meta-bar {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
-      font-size: 0.9rem; color: var(--text-dim); margin-bottom: 28px;
-    }
-
-    .meta-bar a { color: var(--primary); text-decoration: none; }
-    .meta-bar a:hover { text-decoration: underline; }
-
-    .nav-bar {
-      background: var(--card-bg); backdrop-filter: blur(16px);
-      border: 1px solid var(--card-border); border-radius: 16px; padding: 8px;
-      display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-      gap: 6px; margin-bottom: 40px; box-shadow: var(--shadow); position: sticky; top: 16px; z-index: 100;
-    }
-
-    .nav-btn {
-      background: transparent; border: 1px solid transparent; color: var(--text-muted);
-      padding: 8px 16px; border-radius: 10px; font-size: 0.88rem; font-weight: 600;
-      cursor: pointer; text-decoration: none; transition: all 0.2s ease; font-family: inherit;
-    }
-
-    .nav-btn:hover { color: var(--text-main); background: rgba(255, 255, 255, 0.05); }
-
-    .nav-btn.active {
-      background: var(--primary); color: #090d16; font-weight: 700; border-color: var(--primary);
-    }
-
-    .nav-btn.privacy-link {
-      background: rgba(56, 189, 248, 0.12); color: #7dd3fc; border-color: rgba(56, 189, 248, 0.25);
-    }
-
-    .card {
-      background: var(--card-bg); backdrop-filter: blur(16px);
-      border: 1px solid var(--card-border); border-radius: 20px; padding: 32px;
-      margin-bottom: 24px; box-shadow: var(--shadow);
-    }
-
-    .card-title {
-      font-size: 1.35rem; font-weight: 700; color: #ffffff;
-      display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
-      padding-bottom: 12px; border-bottom: 1px solid var(--line);
-    }
-
-    .card-title-icon {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 36px; height: 36px; background: rgba(244, 63, 94, 0.12); border-radius: 10px; font-size: 1.15rem;
-    }
-
-    p { margin-bottom: 16px; color: var(--text-main); }
-    p:last-child { margin-bottom: 0; }
-    ul { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 12px; }
-    li { position: relative; padding-left: 28px; color: var(--text-main); }
-    li::before { content: "•"; color: var(--accent); position: absolute; left: 10px; font-size: 1.4rem; line-height: 1; top: -2px; }
-    strong { color: #ffffff; font-weight: 700; }
-
-    .gold-box {
-      background: var(--gold-bg); border: 1px solid rgba(251, 191, 36, 0.28);
-      border-radius: 14px; padding: 18px 22px; margin: 20px 0; font-size: 0.95rem; color: #fef3c7;
-    }
-
-    footer {
-      margin-top: auto; background: rgba(11, 17, 31, 0.9); border-top: 1px solid var(--line);
-      padding: 36px 0; text-align: center; font-size: 0.88rem; color: var(--text-dim);
-    }
-
-    .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; }
-    .footer-links a { color: var(--text-muted); text-decoration: none; }
-    .footer-links a:hover { color: var(--primary); }
-
-    .lang-section { display: none; }
-    .lang-section.active { display: block; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#07110f">
+  <meta name="description" content="Terms of Service for Imposter: Infiltrator Game by FriendSlop Studios.">
+  <title>Terms of Service</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-  <header class="container">
-    <div class="badge-wrap">
-      <span class="badge-dot"></span>
-      Terms of Service
+<body data-document="terms">
+  <div class="progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="site-shell header-inner">
+      <div class="header-actions">
+        <nav class="document-switch" data-i18n-aria="legalDocuments" aria-label="Legal documents"><a class="document-link" data-i18n="navPrivacy" data-document-link href="index.html">Privacy</a><a class="document-link active" data-i18n="navTerms" href="terms.html" aria-current="page">Terms</a></nav>
+        <button class="print-button" data-i18n="print" data-print type="button">Print</button>
+        <button class="icon-button" data-theme-toggle type="button" aria-label="Use light theme">☀</button>
+      </div>
     </div>
-    <h1>Terms of Service</h1>
-    <p class="subtitle"><strong>Imposter: Infiltrator Game</strong></p>
-    <div class="meta-bar">
-      <span>🏢 <strong>Publisher:</strong> FriendSlop Studios</span>
-      <span>📅 <strong>Effective Date:</strong> August 21, 2026</span>
-      <span>✉️ <strong>Support:</strong> <a href="mailto:friendslopstudiossupport@gmail.com">friendslopstudiossupport@gmail.com</a></span>
-    </div>
-
-    <nav class="nav-bar" aria-label="Language & Terms Navigation">
-      <button class="nav-btn active" onclick="setLang('en')">English</button>
-      <button class="nav-btn" onclick="setLang('es')">Español</button>
-      <button class="nav-btn" onclick="setLang('fr')">Français</button>
-      <button class="nav-btn" onclick="setLang('de')">Deutsch</button>
-      <button class="nav-btn" onclick="setLang('pt-br')">Português (BR)</button>
-      <a class="nav-btn privacy-link" href="index.html">← Privacy Policy</a>
-    </nav>
   </header>
 
-  <main class="container">
-
-    <section id="en" class="lang-section active" lang="en">
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">📜</span> 1. Acceptance & Age Requirements</h2>
-        <p>By downloading, installing, or playing <strong>Imposter: Infiltrator Game</strong>, you agree to these Terms. You must be at least <strong>13 years of age</strong> to use this application. If you do not meet this age requirement or do not agree with these Terms, do not install or use the app.</p>
-      </div>
-
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🎮</span> 2. License & Game Content</h2>
-        <p>FriendSlop Studios grants you a personal, non-exclusive, non-transferable, revocable license to use the game for personal, non-commercial entertainment. You agree not to reverse engineer, copy, distribute, modify, or exploit the game's source code, assets, artwork, or game packs without express written permission.</p>
-      </div>
-
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✏️</span> 3. User-Generated Content & Conduct</h2>
-        <p>When creating custom word packs or entering player names, you agree not to submit content that is defamatory, hateful, abusive, sexually explicit, or infringing upon intellectual property rights. You are solely responsible for local custom content created on your device.</p>
-      </div>
-
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">💎</span> 4. In-App Purchases & Advertising</h2>
-        <p>Optional in-app purchases (such as the Lifetime Premium Unlock) are billed through <strong>Google Play</strong> and are subject to Google Play Terms of Service. In-game credits earned via rewarded ads are virtual, non-transferable, and possess no real-world monetary value.</p>
-      </div>
-
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">⚖️</span> 5. Disclaimers & Limitation of Liability</h2>
-        <p>The game is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. FriendSlop Studios will not be liable for any indirect, incidental, or consequential damages resulting from your use of the application.</p>
-      </div>
-
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🛑</span> 6. Termination</h2>
-        <p>We may terminate or suspend your license to use the app immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
-      </div>
-
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🔄</span> 7. Changes to These Terms</h2>
-        <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. By continuing to access or use our game after those revisions become effective, you agree to be bound by the revised terms.</p>
-      </div>
-
-
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✉️</span> 8. Contact Information</h2>
-        <p>For questions or support regarding these Terms:</p>
-        <div class="gold-box">
-          <strong>FriendSlop Studios</strong><br>
-          Email: <a href="mailto:friendslopstudiossupport@gmail.com" style="color: inherit; font-weight: 700;">friendslopstudiossupport@gmail.com</a>
-        </div>
-      </div>
+  <main>
+    <section class="hero site-shell">
+      <h1 data-i18n="title">Terms of Service</h1>
     </section>
 
-    <section id="es" class="lang-section" lang="es">
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">📜</span> 1. Aceptación y Requisitos de Edad</h2>
-        <p>Al descargar, instalar o jugar <strong>Imposter: Infiltrator Game</strong>, aceptas estos Términos. Debes tener al menos <strong>13 años de edad</strong> para usar esta aplicación. Si no cumples con este requisito de edad o no estás de acuerdo con estos Términos, no instales ni uses la aplicación.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🎮</span> 2. Licencia y Contenido del Juego</h2>
-        <p>FriendSlop Studios te otorga una licencia personal, no exclusiva, intransferible y revocable para usar el juego con fines de entretenimiento personal y no comercial. Aceptas no realizar ingeniería inversa, copiar, distribuir, modificar ni explotar el código fuente, los activos, las ilustraciones o los paquetes del juego sin permiso expreso por escrito.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✏️</span> 3. Contenido Generado por el Usuario y Conducta</h2>
-        <p>Al crear paquetes de palabras personalizados o ingresar nombres de jugadores, aceptas no enviar contenido que sea difamatorio, de odio, abusivo, sexualmente explícito o que infrinja los derechos de propiedad intelectual. Eres el único responsable del contenido personalizado local creado en tu dispositivo.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">💎</span> 4. Compras en la Aplicación y Publicidad</h2>
-        <p>Las compras opcionales dentro de la aplicación (como el Desbloqueo Premium de Por Vida) se facturan a través de <strong>Google Play</strong> y están sujetas a los Términos de Servicio de Google Play. Los créditos en el juego obtenidos mediante anuncios recompensados son virtuales, intransferibles y no tienen valor monetario real.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">⚖️</span> 5. Descargos de Responsabilidad y Limitación de Responsabilidad</h2>
-        <p>El juego se proporciona "TAL CUAL" y "SEGÚN DISPONIBILIDAD" sin garantías de ningún tipo. FriendSlop Studios no será responsable de ningún daño indirecto, incidental o consecuente que resulte del uso de la aplicación.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🛑</span> 6. Terminación</h2>
-        <p>Podemos terminar o suspender tu licencia para usar la aplicación inmediatamente, sin previo aviso o responsabilidad, por cualquier motivo, incluyendo sin limitación si incumples los Términos.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🔄</span> 7. Cambios en Estos Términos</h2>
-        <p>Nos reservamos el derecho, a nuestra entera discreción, de modificar o reemplazar estos Términos en cualquier momento. Al continuar accediendo o usando nuestro juego después de que esas revisiones entren en vigencia, aceptas estar sujeto a los términos revisados.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✉️</span> 8. Información de Contacto</h2>
-        <p>Para preguntas o soporte sobre estos Términos:</p>
-        <div class="gold-box">
-          <strong>FriendSlop Studios</strong><br>
-          Email: <a href="mailto:friendslopstudiossupport@gmail.com" style="color: inherit; font-weight: 700;">friendslopstudiossupport@gmail.com</a>
-        </div>
-      </div>
+    <section class="site-shell language-panel" data-i18n-aria="chooseLanguage" aria-label="Choose document language">
+      <span class="language-label" data-i18n="readIn">Read in</span>
+      <div class="language-tabs" role="group" data-i18n-aria="languages" aria-label="Languages"><button class="lang-button active" data-lang="en" aria-pressed="true" type="button">English</button><button class="lang-button" data-lang="es" aria-pressed="false" type="button">Español</button><button class="lang-button" data-lang="fr" aria-pressed="false" type="button">Français</button><button class="lang-button" data-lang="de" aria-pressed="false" type="button">Deutsch</button><button class="lang-button" data-lang="pt-br" aria-pressed="false" type="button">Português</button></div>
     </section>
+    <noscript><div class="site-shell noscript">JavaScript is disabled, so the English version is shown. Enable JavaScript to switch languages.</div></noscript>
 
-    <section id="fr" class="lang-section" lang="fr">
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">📜</span> 1. Acceptation et Conditions d'Âge</h2>
-        <p>En téléchargeant, installant ou jouant à <strong>Imposter: Infiltrator Game</strong>, vous acceptez ces Conditions. Vous devez avoir au moins <strong>13 ans</strong> pour utiliser cette application. Si vous ne remplissez pas cette condition d'âge ou n'acceptez pas ces Conditions, n'installez pas et n'utilisez pas l'application.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🎮</span> 2. Licence et Contenu du Jeu</h2>
-        <p>FriendSlop Studios vous accorde une licence personnelle, non exclusive, non transférable et révocable pour utiliser le jeu à des fins de divertissement personnel et non commercial. Vous acceptez de ne pas faire d'ingénierie inverse, copier, distribuer, modifier ou exploiter le code source, les ressources, les illustrations ou les packs du jeu sans autorisation écrite expresse.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✏️</span> 3. Contenu Généré par l'Utilisateur et Conduite</h2>
-        <p>Lors de la création de packs de mots personnalisés ou de la saisie de noms de joueurs, vous acceptez de ne pas soumettre de contenu diffamatoire, haineux, abusif, sexuellement explicite ou enfreignant les droits de propriété intellectuelle. Vous êtes seul responsable du contenu personnalisé local créé sur votre appareil.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">💎</span> 4. Achats Intégrés et Publicité</h2>
-        <p>Les achats intégrés facultatifs (tels que le Déblocage Premium à Vie) sont facturés via <strong>Google Play</strong> et sont soumis aux Conditions d'Utilisation de Google Play. Les crédits en jeu gagnés via des publicités avec récompense sont virtuels, non transférables et n'ont aucune valeur monétaire réelle.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">⚖️</span> 5. Avis de Non-Responsabilité et Limitation de Responsabilité</h2>
-        <p>Le jeu est fourni "TEL QUEL" et "SELON LA DISPONIBILITÉ" sans garanties d'aucune sorte. FriendSlop Studios ne sera pas responsable des dommages indirects, accessoires ou consécutifs résultant de votre utilisation de l'application.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🛑</span> 6. Résiliation</h2>
-        <p>Nous pouvons résilier ou suspendre votre licence d'utilisation de l'application immédiatement, sans préavis ni responsabilité, pour quelque raison que ce soit, y compris sans limitation si vous enfreignez les Conditions.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🔄</span> 7. Modifications de ces Conditions</h2>
-        <p>Nous nous réservons le droit, à notre seule discrétion, de modifier ou de remplacer ces Conditions à tout moment. En continuant à accéder ou à utiliser notre jeu après l'entrée en vigueur de ces révisions, vous acceptez d'être lié par les conditions révisées.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✉️</span> 8. Coordonnées</h2>
-        <p>Pour des questions ou une assistance concernant ces Conditions :</p>
-        <div class="gold-box">
-          <strong>FriendSlop Studios</strong><br>
-          Email: <a href="mailto:friendslopstudiossupport@gmail.com" style="color: inherit; font-weight: 700;">friendslopstudiossupport@gmail.com</a>
-        </div>
-      </div>
-    </section>
+    <div class="site-shell legal-layout">
+      <aside class="toc" data-i18n-aria="onThisPage" aria-label="On this page"><p class="toc-title" data-i18n="onThisPage">On this page</p><nav data-toc></nav></aside>
+      <div class="legal-content">
+        <section class="lang-section" data-language="en" lang="en">
+          <div class="snapshot"><h2>The agreement at a glance</h2><p>Use Imposter for personal entertainment, keep local custom content respectful and lawful, and understand that credits and advertising availability are not guaranteed.</p><div class="snapshot-grid"><div class="snapshot-item"><span class="snapshot-icon">🎭</span><strong>Personal-use license</strong><span>You may play the game, but you do not acquire ownership of its code, artwork, or bundled content.</span></div><div class="snapshot-item"><span class="snapshot-icon">✍️</span><strong>Your local content</strong><span>You are responsible for player names, groups, and custom prompts created on your device.</span></div><div class="snapshot-item"><span class="snapshot-icon">💎</span><strong>Google handles purchases</strong><span>Premium is a one-time Google Play product; pending or cancelled purchases do not unlock it.</span></div></div></div>
+          <article class="legal-card" id="terms-en-acceptance" data-section><div class="section-heading"><span class="section-number">01</span><h2>Acceptance and age requirement</h2></div><p>These Terms form an agreement between you and FriendSlop Studios regarding <strong>Imposter: Infiltrator Game</strong>. By downloading, installing, or using the app, you agree to these Terms and the Privacy Policy.</p><p>The app is intended for people aged <strong>13 and older</strong>. Users who select the under-13 age band cannot continue into the game. If you do not agree or do not meet the age requirement, do not use the app.</p></article>
+          <article class="legal-card" id="terms-en-license" data-section><div class="section-heading"><span class="section-number">02</span><h2>License and intellectual property</h2></div><p>FriendSlop grants you a limited, personal, non-exclusive, non-transferable, revocable license to use the app for lawful, non-commercial entertainment, subject to these Terms.</p><p>The app’s software, design, branding, artwork, sounds, and bundled content are owned by FriendSlop or used under applicable licenses. You may not copy, sell, redistribute, rent, sublicense, bypass security, extract assets, or reverse engineer the app, except where applicable law permits an activity despite this restriction.</p></article>
+          <article class="legal-card" id="terms-en-content" data-section><div class="section-heading"><span class="section-number">03</span><h2>Local user content and conduct</h2></div><p>Player names, friend groups, custom packs, prompts, questions, answers, and clues are entered locally by people sharing the device. FriendSlop does not host or moderate this content.</p><p>You are responsible for content created or shown on your device. Do not use the app to create content that is unlawful, threatening, hateful, harassing, sexually exploitative, defamatory, invasive of privacy, or infringing. Do not enter sensitive personal information. You must have any rights needed for content you add.</p></article>
+          <article class="legal-card" id="terms-en-credits" data-section><div class="section-heading"><span class="section-number">04</span><h2>Credits, timed unlocks, and rewarded ads</h2></div><p>Credits are promotional, in-app units used for features such as timed category access, modifiers, custom packs, or saved groups. They have no cash value, are not property, cannot be transferred, sold, redeemed, or withdrawn, and may be lost if local app data is erased or the app is uninstalled.</p><p>Eligible users may voluntarily watch a rewarded ad. Two credits are granted only after the advertising provider reports that the reward was earned. Ad loading, availability, and successful playback are not guaranteed. No reward is owed if an ad is unavailable, fails, or closes before the provider reports completion.</p></article>
+          <article class="legal-card" id="terms-en-premium" data-section><div class="section-heading"><span class="section-number">05</span><h2>Premium purchase, restoration, and refunds</h2></div><p><strong>Premium Lifetime Unlock</strong> is a one-time, non-consumable Google Play product. The displayed price and transaction are controlled by Google Play. Premium activates only after Google reports a completed purchase and the app successfully acknowledges it; pending or cancelled transactions do not grant access.</p><p>Ownership can normally be restored through Google Play after reinstalling or changing devices when the same eligible Google account owns the product. Purchase availability and restoration depend on Google Play, account status, device compatibility, and continued availability of the app. Refunds and payment disputes are governed by Google Play’s policies and applicable law. Statutory consumer rights remain unaffected.</p></article>
+          <article class="legal-card" id="terms-en-services" data-section><div class="section-heading"><span class="section-number">06</span><h2>Third-party services and changes to the app</h2></div><p>Google Play, Google Mobile Ads, and Google UMP are third-party services governed by their own terms and policies. FriendSlop does not control their availability, advertisements, consent forms, payment systems, or account decisions.</p><p>We may add, change, suspend, or remove features, bundled prompts, credit costs, timed unlock durations, supported devices, or third-party integrations. We will not retroactively convert the one-time Premium product into a subscription. Some changes may be necessary for security, legal compliance, platform requirements, or continued operation.</p></article>
+          <article class="legal-card" id="terms-en-disclaimer" data-section><div class="section-heading"><span class="section-number">07</span><h2>Disclaimers and limitation of liability</h2></div><p>To the fullest extent allowed by law, the app is provided “as is” and “as available,” without implied warranties of uninterrupted operation, error-free content, fitness for a particular purpose, or availability of ads and third-party services.</p><p>To the fullest extent allowed by law, FriendSlop is not liable for indirect, incidental, special, consequential, or punitive damages, lost data, lost profits, or losses caused by local content, device sharing, third-party services, or inability to use the app. Nothing in these Terms excludes liability or consumer rights that cannot legally be excluded.</p></article>
+          <article class="legal-card" id="terms-en-contact" data-section><div class="section-heading"><span class="section-number">08</span><h2>Termination, changes to these Terms, and contact</h2></div><p>Your license ends if you materially violate these Terms. You may stop using the app at any time by uninstalling it. Provisions that logically survive termination—including ownership, disclaimers, and limitations—continue to apply.</p><p>We may update these Terms for app, legal, or platform changes. The date above identifies the current version. Continued use after an update means you accept the revised Terms where permitted by law. Applicable mandatory law governs without taking away protections that cannot be waived.</p><div class="link-grid"><a class="resource-link" href="index.html" data-document-link>Privacy Policy <span>→</span></a><a class="resource-link" href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms <span>↗</span></a></div><div class="contact-card"><div><span>Questions and support</span><strong>FriendSlop Studios</strong></div><a href="mailto:friendslopstudiossupport@gmail.com">friendslopstudiossupport@gmail.com</a></div></article>
+        </section>
 
-    <section id="de" class="lang-section" lang="de">
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">📜</span> 1. Annahme & Altersanforderungen</h2>
-        <p>Durch Herunterladen, Installieren oder Spielen von <strong>Imposter: Infiltrator Game</strong> stimmen Sie diesen Bedingungen zu. Sie müssen mindestens <strong>13 Jahre alt</strong> sein, um diese Anwendung zu nutzen. Wenn Sie diese Altersanforderung nicht erfüllen oder diesen Bedingungen nicht zustimmen, installieren oder nutzen Sie die App nicht.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🎮</span> 2. Lizenz & Spielinhalte</h2>
-        <p>FriendSlop Studios gewährt Ihnen eine persönliche, nicht exklusive, nicht übertragbare, widerrufliche Lizenz zur Nutzung des Spiels für persönliche, nicht kommerzielle Unterhaltungszwecke. Sie stimmen zu, den Quellcode, die Assets, Grafiken oder Spielpakete ohne ausdrückliche schriftliche Genehmigung nicht zurückzuentwickeln, zu kopieren, zu verteilen, zu ändern oder zu verwerten.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✏️</span> 3. Benutzergenerierte Inhalte & Verhalten</h2>
-        <p>Bei der Erstellung von benutzerdefinierten Wortpaketen oder der Eingabe von Spielernamen stimmen Sie zu, keine Inhalte einzureichen, die diffamierend, hasserfüllt, missbräuchlich, sexuell explizit sind oder geistige Eigentumsrechte verletzen. Sie sind allein verantwortlich für lokale benutzerdefinierte Inhalte, die auf Ihrem Gerät erstellt werden.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">💎</span> 4. In-App-Käufe & Werbung</h2>
-        <p>Optionale In-App-Käufe (wie die lebenslange Premium-Freischaltung) werden über <strong>Google Play</strong> abgerechnet und unterliegen den Nutzungsbedingungen von Google Play. Im Spiel durch belohnte Werbung verdiente Credits sind virtuell, nicht übertragbar und besitzen keinen echten Geldwert.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">⚖️</span> 5. Haftungsausschluss & Haftungsbeschränkung</h2>
-        <p>Das Spiel wird "WIE BESEHEN" und "WIE VERFÜGBAR" ohne jegliche Garantien bereitgestellt. FriendSlop Studios haftet nicht für indirekte, zufällige oder Folgeschäden, die sich aus Ihrer Nutzung der Anwendung ergeben.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🛑</span> 6. Kündigung</h2>
-        <p>Wir können Ihre Lizenz zur Nutzung der App sofort, ohne vorherige Ankündigung oder Haftung, aus beliebigem Grund beenden oder aussetzen, einschließlich und ohne Einschränkung, wenn Sie gegen die Bedingungen verstoßen.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🔄</span> 7. Änderungen an diesen Bedingungen</h2>
-        <p>Wir behalten uns das Recht vor, diese Bedingungen nach eigenem Ermessen jederzeit zu ändern oder zu ersetzen. Indem Sie nach Inkrafttreten dieser Überarbeitungen weiterhin auf unser Spiel zugreifen oder es nutzen, erklären Sie sich mit den überarbeiteten Bedingungen einverstanden.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✉️</span> 8. Kontaktinformationen</h2>
-        <p>Für Fragen oder Unterstützung zu diesen Bedingungen:</p>
-        <div class="gold-box">
-          <strong>FriendSlop Studios</strong><br>
-          Email: <a href="mailto:friendslopstudiossupport@gmail.com" style="color: inherit; font-weight: 700;">friendslopstudiossupport@gmail.com</a>
-        </div>
-      </div>
-    </section>
+        <section class="lang-section" data-language="es" lang="es" hidden>
+          <div class="snapshot"><h2>El acuerdo, en resumen</h2><p>Usa Imposter para entretenimiento personal, mantén el contenido local respetuoso y legal, y comprende que los créditos y los anuncios no están garantizados.</p><div class="snapshot-grid"><div class="snapshot-item"><span class="snapshot-icon">🎭</span><strong>Licencia de uso personal</strong><span>Puedes jugar, pero no adquieres la propiedad del código, arte o contenido incluido.</span></div><div class="snapshot-item"><span class="snapshot-icon">✍️</span><strong>Tu contenido local</strong><span>Eres responsable de nombres, grupos y preguntas creados en tu dispositivo.</span></div><div class="snapshot-item"><span class="snapshot-icon">💎</span><strong>Google gestiona las compras</strong><span>Premium es un producto de pago único; una compra pendiente o cancelada no lo activa.</span></div></div></div>
+          <article class="legal-card" id="terms-es-acceptance" data-section><div class="section-heading"><span class="section-number">01</span><h2>Aceptación y requisito de edad</h2></div><p>Estas Condiciones son un acuerdo entre tú y FriendSlop Studios sobre <strong>Imposter: Infiltrator Game</strong>. Al descargar, instalar o usar la aplicación, aceptas estas Condiciones y la Política de Privacidad.</p><p>La aplicación está destinada a personas de <strong>13 años o más</strong>. Quienes seleccionen menor de 13 años no pueden continuar. Si no aceptas o no cumples la edad, no uses la aplicación.</p></article>
+          <article class="legal-card" id="terms-es-license" data-section><div class="section-heading"><span class="section-number">02</span><h2>Licencia y propiedad intelectual</h2></div><p>FriendSlop te concede una licencia limitada, personal, no exclusiva, intransferible y revocable para usar la aplicación con fines legales de entretenimiento no comercial.</p><p>El software, diseño, marca, arte, sonidos y contenido incluido pertenecen a FriendSlop o se usan bajo licencia. No puedes copiar, vender, redistribuir, alquilar, sublicenciar, eludir medidas de seguridad, extraer recursos ni realizar ingeniería inversa, salvo cuando la ley aplicable permita expresamente una actividad pese a esta restricción.</p></article>
+          <article class="legal-card" id="terms-es-content" data-section><div class="section-heading"><span class="section-number">03</span><h2>Contenido local y conducta</h2></div><p>Los nombres, grupos, paquetes, preguntas, respuestas y pistas son introducidos localmente por quienes comparten el dispositivo. FriendSlop no aloja ni modera ese contenido.</p><p>Eres responsable del contenido creado o mostrado. No crees contenido ilegal, amenazante, odioso, acosador, sexualmente explotador, difamatorio, invasivo o infractor. No introduzcas datos personales sensibles y asegúrate de tener los derechos necesarios.</p></article>
+          <article class="legal-card" id="terms-es-credits" data-section><div class="section-heading"><span class="section-number">04</span><h2>Créditos, desbloqueos y anuncios recompensados</h2></div><p>Los créditos son unidades promocionales para funciones de la aplicación. No tienen valor monetario, no son propiedad, no pueden transferirse, venderse, canjearse o retirarse, y pueden perderse al borrar los datos o desinstalar.</p><p>Los usuarios elegibles pueden elegir ver un anuncio. Solo se conceden dos créditos cuando el proveedor confirma la recompensa. La carga y disponibilidad no están garantizadas; no se debe recompensa si el anuncio falla, no está disponible o se cierra antes de la confirmación.</p></article>
+          <article class="legal-card" id="terms-es-premium" data-section><div class="section-heading"><span class="section-number">05</span><h2>Compra Premium, restauración y reembolsos</h2></div><p><strong>Desbloqueo Premium de por vida</strong> es un producto no consumible de pago único de Google Play. Google controla el precio y la transacción. Solo se activa tras una compra completada y confirmada correctamente; las transacciones pendientes o canceladas no conceden acceso.</p><p>Normalmente puede restaurarse con la misma cuenta de Google elegible. La disponibilidad depende de Google Play, el estado de la cuenta, el dispositivo y la continuidad de la aplicación. Los reembolsos se rigen por las políticas de Google Play y la ley. Los derechos legales del consumidor no se ven afectados.</p></article>
+          <article class="legal-card" id="terms-es-services" data-section><div class="section-heading"><span class="section-number">06</span><h2>Servicios externos y cambios en la aplicación</h2></div><p>Google Play, Google Mobile Ads y Google UMP son servicios externos con sus propias condiciones. FriendSlop no controla su disponibilidad, anuncios, formularios, pagos o decisiones de cuenta.</p><p>Podemos añadir, cambiar, suspender o retirar funciones, contenido, costes de créditos, duración de desbloqueos, dispositivos compatibles o integraciones. No convertiremos retroactivamente el producto Premium de pago único en suscripción. Algunos cambios pueden ser necesarios por seguridad, ley o requisitos de plataforma.</p></article>
+          <article class="legal-card" id="terms-es-disclaimer" data-section><div class="section-heading"><span class="section-number">07</span><h2>Exenciones y limitación de responsabilidad</h2></div><p>En la máxima medida permitida, la aplicación se proporciona “tal cual” y “según disponibilidad”, sin garantías implícitas de funcionamiento ininterrumpido, ausencia de errores, idoneidad ni disponibilidad de anuncios o servicios externos.</p><p>En la máxima medida permitida, FriendSlop no responde por daños indirectos, incidentales, especiales, consecuentes o punitivos, pérdida de datos o beneficios, contenido local, uso compartido, servicios externos o imposibilidad de uso. Nada excluye derechos o responsabilidades que la ley no permita excluir.</p></article>
+          <article class="legal-card" id="terms-es-contact" data-section><div class="section-heading"><span class="section-number">08</span><h2>Terminación, cambios y contacto</h2></div><p>Tu licencia termina si incumples sustancialmente estas Condiciones. Puedes dejar de usar la aplicación desinstalándola. Las disposiciones que por su naturaleza deban continuar seguirán vigentes.</p><p>Podemos actualizar estas Condiciones por cambios de la aplicación, legales o de plataforma. La fecha superior identifica la versión vigente. El uso posterior implica aceptación cuando la ley lo permita. La ley obligatoria aplicable rige sin eliminar protecciones irrenunciables.</p><div class="link-grid"><a class="resource-link" href="index.html" data-document-link>Política de Privacidad <span>→</span></a><a class="resource-link" href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Condiciones de Google Play <span>↗</span></a></div><div class="contact-card"><div><span>Preguntas y soporte</span><strong>FriendSlop Studios</strong></div><a href="mailto:friendslopstudiossupport@gmail.com">friendslopstudiossupport@gmail.com</a></div></article>
+        </section>
 
-    <section id="pt-br" class="lang-section" lang="pt-BR">
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">📜</span> 1. Aceitação e Requisitos de Idade</h2>
-        <p>Ao baixar, instalar ou jogar <strong>Imposter: Infiltrator Game</strong>, você concorda com estes Termos. Você deve ter pelo menos <strong>13 anos de idade</strong> para usar este aplicativo. Se você não atender a este requisito de idade ou não concordar com estes Termos, não instale ou use o aplicativo.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🎮</span> 2. Licença e Conteúdo do Jogo</h2>
-        <p>A FriendSlop Studios concede a você uma licença pessoal, não exclusiva, intransferível e revogável para usar o jogo para entretenimento pessoal e não comercial. Você concorda em não fazer engenharia reversa, copiar, distribuir, modificar ou explorar o código-fonte, recursos, artes ou pacotes de jogos sem permissão expressa por escrito.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✏️</span> 3. Conteúdo Gerado pelo Usuário e Conduta</h2>
-        <p>Ao criar pacotes de palavras personalizados ou inserir nomes de jogadores, você concorda em não enviar conteúdo difamatório, odioso, abusivo, sexualmente explícito ou que infrinja direitos de propriedade intelectual. Você é o único responsável pelo conteúdo personalizado local criado no seu dispositivo.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">💎</span> 4. Compras no Aplicativo e Publicidade</h2>
-        <p>As compras opcionais no aplicativo (como o Desbloqueio Premium Vitalício) são faturadas pelo <strong>Google Play</strong> e estão sujeitas aos Termos de Serviço do Google Play. Os créditos no jogo ganhos através de anúncios premiados são virtuais, intransferíveis e não possuem valor monetário no mundo real.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">⚖️</span> 5. Isenções e Limitação de Responsabilidade</h2>
-        <p>O jogo é fornecido "COMO ESTÁ" e "CONFORME DISPONÍVEL" sem garantias de qualquer tipo. A FriendSlop Studios não será responsável por quaisquer danos indiretos, incidentais ou consequentes resultantes do seu uso do aplicativo.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🛑</span> 6. Rescisão</h2>
-        <p>Podemos rescindir ou suspender sua licença para usar o aplicativo imediatamente, sem aviso prévio ou responsabilidade, por qualquer motivo, incluindo, sem limitação, se você violar os Termos.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">🔄</span> 7. Mudanças Nestes Termos</h2>
-        <p>Reservamo-nos o direito, a nosso critério exclusivo, de modificar ou substituir estes Termos a qualquer momento. Ao continuar a acessar ou usar nosso jogo após a entrada em vigor dessas revisões, você concorda em ficar vinculado aos termos revisados.</p>
-      </div>
-      <div class="card">
-        <h2 class="card-title"><span class="card-title-icon">✉️</span> 8. Informações de Contato</h2>
-        <p>Para dúvidas ou suporte sobre estes Termos:</p>
-        <div class="gold-box">
-          <strong>FriendSlop Studios</strong><br>
-          Email: <a href="mailto:friendslopstudiossupport@gmail.com" style="color: inherit; font-weight: 700;">friendslopstudiossupport@gmail.com</a>
-        </div>
-      </div>
-    </section>
+        <section class="lang-section" data-language="fr" lang="fr" hidden>
+          <div class="snapshot"><h2>L’accord en bref</h2><p>Utilisez Imposter pour votre divertissement personnel, gardez le contenu local respectueux et légal, et sachez que les crédits et publicités ne sont pas garantis.</p><div class="snapshot-grid"><div class="snapshot-item"><span class="snapshot-icon">🎭</span><strong>Licence personnelle</strong><span>Vous pouvez jouer, sans acquérir la propriété du code, des illustrations ou du contenu inclus.</span></div><div class="snapshot-item"><span class="snapshot-icon">✍️</span><strong>Votre contenu local</strong><span>Vous êtes responsable des noms, groupes et questions créés sur l’appareil.</span></div><div class="snapshot-item"><span class="snapshot-icon">💎</span><strong>Google gère les achats</strong><span>Premium est un achat unique ; un achat en attente ou annulé ne l’active pas.</span></div></div></div>
+          <article class="legal-card" id="terms-fr-acceptance" data-section><div class="section-heading"><span class="section-number">01</span><h2>Acceptation et âge requis</h2></div><p>Ces Conditions constituent un accord entre vous et FriendSlop Studios concernant <strong>Imposter: Infiltrator Game</strong>. En téléchargeant, installant ou utilisant l’application, vous acceptez ces Conditions et la Politique de confidentialité.</p><p>L’application est destinée aux personnes de <strong>13 ans et plus</strong>. Le choix « moins de 13 ans » bloque l’accès. Si vous n’acceptez pas ou ne remplissez pas cette condition, n’utilisez pas l’application.</p></article>
+          <article class="legal-card" id="terms-fr-license" data-section><div class="section-heading"><span class="section-number">02</span><h2>Licence et propriété intellectuelle</h2></div><p>FriendSlop vous accorde une licence limitée, personnelle, non exclusive, non transférable et révocable pour une utilisation légale, personnelle et non commerciale.</p><p>Le logiciel, le design, la marque, les illustrations, les sons et le contenu inclus appartiennent à FriendSlop ou sont utilisés sous licence. Vous ne pouvez pas copier, vendre, redistribuer, louer, sous-licencier, contourner la sécurité, extraire les ressources ou effectuer de l’ingénierie inverse, sauf si la loi applicable autorise l’activité malgré cette restriction.</p></article>
+          <article class="legal-card" id="terms-fr-content" data-section><div class="section-heading"><span class="section-number">03</span><h2>Contenu local et conduite</h2></div><p>Les noms, groupes, packs, questions, réponses et indices sont saisis localement par les personnes partageant l’appareil. FriendSlop n’héberge ni ne modère ce contenu.</p><p>Vous êtes responsable du contenu créé ou affiché. Ne créez aucun contenu illégal, menaçant, haineux, harcelant, sexuellement exploiteur, diffamatoire, portant atteinte à la vie privée ou aux droits d’autrui. Ne saisissez aucune donnée sensible et assurez-vous de détenir les droits nécessaires.</p></article>
+          <article class="legal-card" id="terms-fr-credits" data-section><div class="section-heading"><span class="section-number">04</span><h2>Crédits, déverrouillages et publicités récompensées</h2></div><p>Les crédits sont des unités promotionnelles utilisables dans l’application. Ils n’ont aucune valeur monétaire, ne constituent pas un bien, ne peuvent être transférés, vendus, échangés ou retirés et peuvent disparaître si les données sont effacées ou l’application désinstallée.</p><p>Les utilisateurs éligibles peuvent choisir une publicité. Deux crédits ne sont accordés qu’après confirmation du fournisseur. Chargement et disponibilité ne sont pas garantis ; aucune récompense n’est due si la publicité échoue, est indisponible ou fermée avant confirmation.</p></article>
+          <article class="legal-card" id="terms-fr-premium" data-section><div class="section-heading"><span class="section-number">05</span><h2>Achat Premium, restauration et remboursements</h2></div><p>Le <strong>Déblocage Premium à vie</strong> est un produit Google Play unique et non consommable. Google contrôle le prix et la transaction. Premium ne s’active qu’après un achat terminé et correctement confirmé ; les opérations en attente ou annulées n’accordent aucun accès.</p><p>Il peut normalement être restauré avec le même compte Google éligible. La disponibilité dépend de Google Play, du compte, de l’appareil et de la présence continue de l’application. Les remboursements relèvent des politiques Google Play et de la loi. Les droits légaux du consommateur restent intacts.</p></article>
+          <article class="legal-card" id="terms-fr-services" data-section><div class="section-heading"><span class="section-number">06</span><h2>Services tiers et modifications de l’application</h2></div><p>Google Play, Google Mobile Ads et Google UMP sont des services tiers soumis à leurs propres conditions. FriendSlop ne contrôle pas leur disponibilité, publicités, formulaires, paiements ou décisions de compte.</p><p>Nous pouvons ajouter, modifier, suspendre ou retirer fonctionnalités, contenu, coûts en crédits, durée des déverrouillages, appareils pris en charge ou intégrations. Le produit Premium unique ne sera pas rétroactivement transformé en abonnement. Certains changements peuvent être nécessaires pour la sécurité, la loi ou la plateforme.</p></article>
+          <article class="legal-card" id="terms-fr-disclaimer" data-section><div class="section-heading"><span class="section-number">07</span><h2>Exclusions et limitation de responsabilité</h2></div><p>Dans la mesure permise par la loi, l’application est fournie « en l’état » et « selon disponibilité », sans garantie implicite de fonctionnement continu, d’absence d’erreur, d’adéquation ou de disponibilité des services tiers.</p><p>Dans la mesure permise, FriendSlop n’est pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs, des pertes de données ou bénéfices, du contenu local, du partage d’appareil, des services tiers ou de l’impossibilité d’utilisation. Rien n’exclut les droits ou responsabilités que la loi interdit d’exclure.</p></article>
+          <article class="legal-card" id="terms-fr-contact" data-section><div class="section-heading"><span class="section-number">08</span><h2>Résiliation, modifications et contact</h2></div><p>Votre licence prend fin en cas de violation substantielle. Vous pouvez cesser l’utilisation en désinstallant l’application. Les clauses qui, par nature, doivent survivre restent applicables.</p><p>Nous pouvons modifier ces Conditions en raison de changements de l’application, de la loi ou de la plateforme. La date en haut indique la version actuelle. L’utilisation ultérieure vaut acceptation lorsque la loi le permet. Le droit impératif applicable s’applique sans retirer les protections auxquelles il est impossible de renoncer.</p><div class="link-grid"><a class="resource-link" href="index.html" data-document-link>Politique de confidentialité <span>→</span></a><a class="resource-link" href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Conditions Google Play <span>↗</span></a></div><div class="contact-card"><div><span>Questions et assistance</span><strong>FriendSlop Studios</strong></div><a href="mailto:friendslopstudiossupport@gmail.com">friendslopstudiossupport@gmail.com</a></div></article>
+        </section>
 
+        <section class="lang-section" data-language="de" lang="de" hidden>
+          <div class="snapshot"><h2>Die Vereinbarung in Kürze</h2><p>Nutzen Sie Imposter zur persönlichen Unterhaltung, halten Sie lokale Inhalte respektvoll und rechtmäßig und beachten Sie, dass Credits und Werbung nicht garantiert sind.</p><div class="snapshot-grid"><div class="snapshot-item"><span class="snapshot-icon">🎭</span><strong>Persönliche Lizenz</strong><span>Sie dürfen spielen, erwerben aber kein Eigentum an Code, Grafik oder mitgelieferten Inhalten.</span></div><div class="snapshot-item"><span class="snapshot-icon">✍️</span><strong>Ihre lokalen Inhalte</strong><span>Sie sind für Namen, Gruppen und eigene Prompts auf dem Gerät verantwortlich.</span></div><div class="snapshot-item"><span class="snapshot-icon">💎</span><strong>Google verwaltet Käufe</strong><span>Premium ist ein Einmalkauf; ausstehende oder stornierte Käufe aktivieren es nicht.</span></div></div></div>
+          <article class="legal-card" id="terms-de-acceptance" data-section><div class="section-heading"><span class="section-number">01</span><h2>Annahme und Altersvoraussetzung</h2></div><p>Diese Bedingungen sind eine Vereinbarung zwischen Ihnen und FriendSlop Studios über <strong>Imposter: Infiltrator Game</strong>. Durch Download, Installation oder Nutzung stimmen Sie diesen Bedingungen und der Datenschutzrichtlinie zu.</p><p>Die App ist für Personen ab <strong>13 Jahren</strong> bestimmt. Bei Auswahl „unter 13“ ist kein Zugang möglich. Wenn Sie nicht zustimmen oder die Altersvoraussetzung nicht erfüllen, nutzen Sie die App nicht.</p></article>
+          <article class="legal-card" id="terms-de-license" data-section><div class="section-heading"><span class="section-number">02</span><h2>Lizenz und geistiges Eigentum</h2></div><p>FriendSlop gewährt Ihnen eine beschränkte, persönliche, nicht ausschließliche, nicht übertragbare und widerrufliche Lizenz zur rechtmäßigen, nicht kommerziellen Unterhaltung.</p><p>Software, Gestaltung, Marke, Grafiken, Sounds und mitgelieferte Inhalte gehören FriendSlop oder werden lizenziert genutzt. Sie dürfen sie nicht kopieren, verkaufen, weitergeben, vermieten, unterlizenzieren, Schutzmaßnahmen umgehen, Assets extrahieren oder zurückentwickeln, außer das anwendbare Recht erlaubt dies trotz der Einschränkung.</p></article>
+          <article class="legal-card" id="terms-de-content" data-section><div class="section-heading"><span class="section-number">03</span><h2>Lokale Nutzerinhalte und Verhalten</h2></div><p>Namen, Gruppen, Pakete, Fragen, Antworten und Hinweise werden lokal von Personen eingegeben, die das Gerät teilen. FriendSlop hostet oder moderiert diese Inhalte nicht.</p><p>Sie sind für erstellte oder angezeigte Inhalte verantwortlich. Erstellen Sie keine rechtswidrigen, bedrohlichen, hasserfüllten, belästigenden, sexuell ausbeuterischen, verleumderischen, privatsphärenverletzenden oder rechtsverletzenden Inhalte. Geben Sie keine sensiblen Daten ein und besitzen Sie die nötigen Rechte.</p></article>
+          <article class="legal-card" id="terms-de-credits" data-section><div class="section-heading"><span class="section-number">04</span><h2>Credits, Freischaltungen und Werbeprämien</h2></div><p>Credits sind Werbeeinheiten für App-Funktionen. Sie haben keinen Geldwert, sind kein Eigentum, können nicht übertragen, verkauft, eingelöst oder ausgezahlt werden und können beim Löschen der Daten oder Deinstallieren verloren gehen.</p><p>Berechtigte Nutzer können freiwillig Werbung ansehen. Zwei Credits werden erst gewährt, wenn der Anbieter die Belohnung bestätigt. Laden und Verfügbarkeit sind nicht garantiert; bei Fehler, Nichtverfügbarkeit oder Schließen vor Bestätigung besteht kein Anspruch.</p></article>
+          <article class="legal-card" id="terms-de-premium" data-section><div class="section-heading"><span class="section-number">05</span><h2>Premium-Kauf, Wiederherstellung und Erstattung</h2></div><p>Die <strong>lebenslange Premium-Freischaltung</strong> ist ein einmaliges, nicht verbrauchbares Google-Play-Produkt. Google kontrolliert Preis und Transaktion. Premium wird erst nach abgeschlossenem und erfolgreich bestätigtem Kauf aktiviert; ausstehende oder stornierte Vorgänge gewähren keinen Zugang.</p><p>Mit demselben berechtigten Google-Konto ist meist eine Wiederherstellung möglich. Verfügbarkeit hängt von Google Play, Konto, Gerät und weiterer App-Verfügbarkeit ab. Erstattungen richten sich nach Google-Play-Regeln und Gesetz. Gesetzliche Verbraucherrechte bleiben unberührt.</p></article>
+          <article class="legal-card" id="terms-de-services" data-section><div class="section-heading"><span class="section-number">06</span><h2>Drittdienste und Änderungen an der App</h2></div><p>Google Play, Google Mobile Ads und Google UMP sind Drittdienste mit eigenen Bedingungen. FriendSlop kontrolliert weder Verfügbarkeit, Werbung, Formulare, Zahlungssysteme noch Kontoentscheidungen.</p><p>Wir können Funktionen, Inhalte, Credit-Kosten, Freischaltdauer, unterstützte Geräte oder Integrationen hinzufügen, ändern, aussetzen oder entfernen. Das einmalige Premium-Produkt wird nicht rückwirkend zum Abonnement. Änderungen können für Sicherheit, Recht oder Plattform nötig sein.</p></article>
+          <article class="legal-card" id="terms-de-disclaimer" data-section><div class="section-heading"><span class="section-number">07</span><h2>Haftungsausschluss und -beschränkung</h2></div><p>Soweit gesetzlich zulässig, wird die App „wie besehen“ und „wie verfügbar“ ohne stillschweigende Garantie für unterbrechungsfreien, fehlerfreien, zweckgeeigneten Betrieb oder verfügbare Drittdienste bereitgestellt.</p><p>Soweit zulässig, haftet FriendSlop nicht für indirekte, zufällige, besondere, Folge- oder Strafschäden, Daten- oder Gewinnverlust, lokale Inhalte, Geräteteilung, Drittdienste oder Nutzungsausfall. Unabdingbare Rechte oder Haftung werden nicht ausgeschlossen.</p></article>
+          <article class="legal-card" id="terms-de-contact" data-section><div class="section-heading"><span class="section-number">08</span><h2>Beendigung, Änderungen und Kontakt</h2></div><p>Die Lizenz endet bei wesentlichem Verstoß. Sie können die Nutzung durch Deinstallation beenden. Bestimmungen, die ihrer Natur nach fortbestehen müssen, gelten weiter.</p><p>Wir können diese Bedingungen wegen App-, Rechts- oder Plattformänderungen aktualisieren. Das Datum oben zeigt die aktuelle Fassung. Weitere Nutzung bedeutet Zustimmung, soweit gesetzlich zulässig. Zwingendes Recht gilt, ohne unverzichtbare Schutzrechte zu entziehen.</p><div class="link-grid"><a class="resource-link" href="index.html" data-document-link>Datenschutzrichtlinie <span>→</span></a><a class="resource-link" href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play-Bedingungen <span>↗</span></a></div><div class="contact-card"><div><span>Fragen und Support</span><strong>FriendSlop Studios</strong></div><a href="mailto:friendslopstudiossupport@gmail.com">friendslopstudiossupport@gmail.com</a></div></article>
+        </section>
+
+        <section class="lang-section" data-language="pt-br" lang="pt-BR" hidden>
+          <div class="snapshot"><h2>O acordo em resumo</h2><p>Use o Imposter para entretenimento pessoal, mantenha o conteúdo local respeitoso e legal e entenda que créditos e anúncios não são garantidos.</p><div class="snapshot-grid"><div class="snapshot-item"><span class="snapshot-icon">🎭</span><strong>Licença de uso pessoal</strong><span>Você pode jogar, mas não adquire propriedade do código, arte ou conteúdo incluído.</span></div><div class="snapshot-item"><span class="snapshot-icon">✍️</span><strong>Seu conteúdo local</strong><span>Você é responsável por nomes, grupos e perguntas criados no aparelho.</span></div><div class="snapshot-item"><span class="snapshot-icon">💎</span><strong>O Google gerencia compras</strong><span>Premium é uma compra única; compras pendentes ou canceladas não o ativam.</span></div></div></div>
+          <article class="legal-card" id="terms-pt-acceptance" data-section><div class="section-heading"><span class="section-number">01</span><h2>Aceitação e requisito de idade</h2></div><p>Estes Termos são um acordo entre você e a FriendSlop Studios sobre <strong>Imposter: Infiltrator Game</strong>. Ao baixar, instalar ou usar o aplicativo, você aceita estes Termos e a Política de Privacidade.</p><p>O aplicativo é destinado a pessoas com <strong>13 anos ou mais</strong>. Quem seleciona menor de 13 não pode continuar. Se você não concordar ou não cumprir a idade, não use o aplicativo.</p></article>
+          <article class="legal-card" id="terms-pt-license" data-section><div class="section-heading"><span class="section-number">02</span><h2>Licença e propriedade intelectual</h2></div><p>A FriendSlop concede uma licença limitada, pessoal, não exclusiva, intransferível e revogável para uso legal, pessoal e não comercial.</p><p>Software, design, marca, arte, sons e conteúdo incluído pertencem à FriendSlop ou são usados sob licença. Você não pode copiar, vender, redistribuir, alugar, sublicenciar, contornar segurança, extrair recursos ou fazer engenharia reversa, exceto quando a lei permitir a atividade apesar desta restrição.</p></article>
+          <article class="legal-card" id="terms-pt-content" data-section><div class="section-heading"><span class="section-number">03</span><h2>Conteúdo local e conduta</h2></div><p>Nomes, grupos, pacotes, perguntas, respostas e dicas são inseridos localmente por quem compartilha o aparelho. A FriendSlop não hospeda nem modera esse conteúdo.</p><p>Você é responsável pelo conteúdo criado ou exibido. Não crie conteúdo ilegal, ameaçador, odioso, assediante, sexualmente exploratório, difamatório, invasivo ou infrator. Não insira dados pessoais sensíveis e tenha os direitos necessários sobre o conteúdo adicionado.</p></article>
+          <article class="legal-card" id="terms-pt-credits" data-section><div class="section-heading"><span class="section-number">04</span><h2>Créditos, desbloqueios e anúncios premiados</h2></div><p>Créditos são unidades promocionais para funções do aplicativo. Não têm valor monetário, não são propriedade, não podem ser transferidos, vendidos, resgatados ou retirados e podem ser perdidos ao apagar dados ou desinstalar.</p><p>Usuários qualificados podem escolher assistir a um anúncio. Dois créditos só são concedidos após confirmação do provedor. Carregamento e disponibilidade não são garantidos; não há recompensa se o anúncio falhar, estiver indisponível ou for fechado antes da confirmação.</p></article>
+          <article class="legal-card" id="terms-pt-premium" data-section><div class="section-heading"><span class="section-number">05</span><h2>Compra Premium, restauração e reembolsos</h2></div><p>O <strong>Desbloqueio Premium vitalício</strong> é um produto não consumível de compra única do Google Play. O Google controla preço e transação. O Premium só ativa após compra concluída e corretamente confirmada; operações pendentes ou canceladas não dão acesso.</p><p>Normalmente pode ser restaurado com a mesma Conta do Google qualificada. A disponibilidade depende do Google Play, conta, aparelho e continuidade do aplicativo. Reembolsos seguem políticas do Google Play e a lei. Direitos legais do consumidor permanecem intactos.</p></article>
+          <article class="legal-card" id="terms-pt-services" data-section><div class="section-heading"><span class="section-number">06</span><h2>Serviços de terceiros e mudanças no aplicativo</h2></div><p>Google Play, Google Mobile Ads e Google UMP são serviços de terceiros com termos próprios. A FriendSlop não controla disponibilidade, anúncios, formulários, pagamentos ou decisões de conta.</p><p>Podemos adicionar, alterar, suspender ou remover funções, conteúdo, custos de créditos, duração de desbloqueios, aparelhos compatíveis ou integrações. O produto Premium de compra única não será transformado retroativamente em assinatura. Mudanças podem ser necessárias por segurança, lei ou plataforma.</p></article>
+          <article class="legal-card" id="terms-pt-disclaimer" data-section><div class="section-heading"><span class="section-number">07</span><h2>Isenções e limitação de responsabilidade</h2></div><p>Na máxima medida permitida, o aplicativo é fornecido “como está” e “conforme disponível”, sem garantias implícitas de operação ininterrupta, ausência de erros, adequação ou disponibilidade de serviços externos.</p><p>Na máxima medida permitida, a FriendSlop não responde por danos indiretos, incidentais, especiais, consequentes ou punitivos, perda de dados ou lucros, conteúdo local, compartilhamento do aparelho, serviços externos ou impossibilidade de uso. Nada exclui direitos ou responsabilidades que a lei não permita excluir.</p></article>
+          <article class="legal-card" id="terms-pt-contact" data-section><div class="section-heading"><span class="section-number">08</span><h2>Encerramento, mudanças e contato</h2></div><p>Sua licença termina se houver violação relevante. Você pode parar de usar desinstalando. Disposições que por natureza devam continuar permanecem válidas.</p><p>Podemos atualizar estes Termos por mudanças no aplicativo, na lei ou plataforma. A data no topo mostra a versão atual. O uso posterior significa aceitação onde permitido. A lei obrigatória aplicável rege sem remover proteções irrenunciáveis.</p><div class="link-grid"><a class="resource-link" href="index.html" data-document-link>Política de Privacidade <span>→</span></a><a class="resource-link" href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Termos do Google Play <span>↗</span></a></div><div class="contact-card"><div><span>Dúvidas e suporte</span><strong>FriendSlop Studios</strong></div><a href="mailto:friendslopstudiossupport@gmail.com">friendslopstudiossupport@gmail.com</a></div></article>
+        </section>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">Privacy Policy</a>
-        <span>·</span>
-        <a href="terms.html">Terms of Service</a>
-        <span>·</span>
-        <a href="mailto:friendslopstudiossupport@gmail.com">Contact Support</a>
-      </div>
-      <p>© 2026 FriendSlop Studios. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    function setLang(langCode) {
-      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.nav-btn').forEach(btn => {
-        if (!btn.classList.contains('privacy-link')) {
-          btn.classList.remove('active');
-        }
-      });
-      const target = document.getElementById(langCode);
-      if (target) target.classList.add('active');
-      const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick')?.includes(langCode));
-      if (activeBtn) activeBtn.classList.add('active');
-      window.location.hash = langCode;
-    }
-    window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash.replace('#', '');
-      if (hash && document.getElementById(hash)) setLang(hash);
-    });
-  </script>
+  <footer class="site-footer"><div class="site-shell footer-inner"><div class="footer-copy"><strong>FriendSlop Studios</strong><span>© 2026 · Imposter: Infiltrator Game</span></div><nav class="footer-links" data-i18n-aria="footerNavigation" aria-label="Footer navigation"><a data-i18n="navPrivacy" data-document-link href="index.html">Privacy</a><a data-i18n="navTerms" href="terms.html">Terms</a><a data-i18n="support" href="mailto:friendslopstudiossupport@gmail.com">Support</a></nav></div></footer>
+  <button class="back-to-top" data-i18n-aria="backToTop" type="button" aria-label="Back to top">↑</button>
+  <script src="app.js" defer></script>
 </body>
 </html>
