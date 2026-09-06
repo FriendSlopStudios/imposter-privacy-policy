@@ -1,11 +1,11 @@
 (() => {
   const supported = ["en", "es", "fr", "de", "pt-br"];
   const commonCopy = {
-    en: { navPrivacy: "Privacy", navTerms: "Terms", print: "Print", readIn: "Read in", onThisPage: "On this page", support: "Support", backToTop: "Back to top", legalDocuments: "Legal documents", chooseLanguage: "Choose document language", languages: "Languages", footerNavigation: "Footer navigation", useLightTheme: "Use light theme", useDarkTheme: "Use dark theme", lightTheme: "Light theme", darkTheme: "Dark theme" },
-    es: { navPrivacy: "Privacidad", navTerms: "Condiciones", print: "Imprimir", readIn: "Leer en", onThisPage: "En esta página", support: "Soporte", backToTop: "Volver arriba", legalDocuments: "Documentos legales", chooseLanguage: "Elegir el idioma del documento", languages: "Idiomas", footerNavigation: "Navegación del pie de página", useLightTheme: "Usar tema claro", useDarkTheme: "Usar tema oscuro", lightTheme: "Tema claro", darkTheme: "Tema oscuro" },
-    fr: { navPrivacy: "Confidentialité", navTerms: "Conditions", print: "Imprimer", readIn: "Lire en", onThisPage: "Sur cette page", support: "Assistance", backToTop: "Retour en haut", legalDocuments: "Documents juridiques", chooseLanguage: "Choisir la langue du document", languages: "Langues", footerNavigation: "Navigation du pied de page", useLightTheme: "Utiliser le thème clair", useDarkTheme: "Utiliser le thème sombre", lightTheme: "Thème clair", darkTheme: "Thème sombre" },
-    de: { navPrivacy: "Datenschutz", navTerms: "Bedingungen", print: "Drucken", readIn: "Lesen auf", onThisPage: "Auf dieser Seite", support: "Support", backToTop: "Nach oben", legalDocuments: "Rechtliche Dokumente", chooseLanguage: "Dokumentsprache auswählen", languages: "Sprachen", footerNavigation: "Fußzeilennavigation", useLightTheme: "Helles Design verwenden", useDarkTheme: "Dunkles Design verwenden", lightTheme: "Helles Design", darkTheme: "Dunkles Design" },
-    "pt-br": { navPrivacy: "Privacidade", navTerms: "Termos", print: "Imprimir", readIn: "Ler em", onThisPage: "Nesta página", support: "Suporte", backToTop: "Voltar ao topo", legalDocuments: "Documentos jurídicos", chooseLanguage: "Escolher o idioma do documento", languages: "Idiomas", footerNavigation: "Navegação do rodapé", useLightTheme: "Usar tema claro", useDarkTheme: "Usar tema escuro", lightTheme: "Tema claro", darkTheme: "Tema escuro" }
+    en: { navPrivacy: "Privacy", navTerms: "Terms", navContact: "Contact", print: "Print", readIn: "Read in", onThisPage: "On this page", support: "Support", backToTop: "Back to top", legalDocuments: "Site navigation", chooseLanguage: "Choose page language", languages: "Languages", footerNavigation: "Footer navigation", useLightTheme: "Use light theme", useDarkTheme: "Use dark theme", lightTheme: "Light theme", darkTheme: "Dark theme" },
+    es: { navPrivacy: "Privacidad", navTerms: "Condiciones", navContact: "Contacto", print: "Imprimir", readIn: "Leer en", onThisPage: "En esta página", support: "Soporte", backToTop: "Volver arriba", legalDocuments: "Navegación del sitio", chooseLanguage: "Elegir el idioma de la página", languages: "Idiomas", footerNavigation: "Navegación del pie de página", useLightTheme: "Usar tema claro", useDarkTheme: "Usar tema oscuro", lightTheme: "Tema claro", darkTheme: "Tema oscuro" },
+    fr: { navPrivacy: "Confidentialité", navTerms: "Conditions", navContact: "Contact", print: "Imprimer", readIn: "Lire en", onThisPage: "Sur cette page", support: "Assistance", backToTop: "Retour en haut", legalDocuments: "Navigation du site", chooseLanguage: "Choisir la langue de la page", languages: "Langues", footerNavigation: "Navigation du pied de page", useLightTheme: "Utiliser le thème clair", useDarkTheme: "Utiliser le thème sombre", lightTheme: "Thème clair", darkTheme: "Thème sombre" },
+    de: { navPrivacy: "Datenschutz", navTerms: "Bedingungen", navContact: "Kontakt", print: "Drucken", readIn: "Lesen auf", onThisPage: "Auf dieser Seite", support: "Support", backToTop: "Nach oben", legalDocuments: "Seitennavigation", chooseLanguage: "Seitensprache auswählen", languages: "Sprachen", footerNavigation: "Fußzeilennavigation", useLightTheme: "Helles Design verwenden", useDarkTheme: "Dunkles Design verwenden", lightTheme: "Helles Design", darkTheme: "Dunkles Design" },
+    "pt-br": { navPrivacy: "Privacidade", navTerms: "Termos", navContact: "Contato", print: "Imprimir", readIn: "Ler em", onThisPage: "Nesta página", support: "Suporte", backToTop: "Voltar ao topo", legalDocuments: "Navegação do site", chooseLanguage: "Escolher o idioma da página", languages: "Idiomas", footerNavigation: "Navegação do rodapé", useLightTheme: "Usar tema claro", useDarkTheme: "Usar tema escuro", lightTheme: "Tema claro", darkTheme: "Tema escuro" }
   };
   const documentCopy = {
     privacy: {
@@ -21,6 +21,13 @@
       fr: { title: "Conditions d’utilisation" },
       de: { title: "Nutzungsbedingungen" },
       "pt-br": { title: "Termos de Serviço" }
+    },
+    contact: {
+      en: { title: "Contact" },
+      es: { title: "Contacto" },
+      fr: { title: "Contact" },
+      de: { title: "Kontakt" },
+      "pt-br": { title: "Contato" }
     }
   };
   const root = document.documentElement;
@@ -54,13 +61,13 @@
     document.querySelectorAll("[data-document-link]").forEach((link) => {
       const url = new URL(link.getAttribute("href"), location.href);
       url.searchParams.set("lang", language);
-      link.setAttribute("href", `${url.pathname.split("/").pop()}?${url.searchParams.toString()}`);
+      link.setAttribute("href", `${url.pathname}?${url.searchParams.toString()}${url.hash}`);
     });
   }
 
   function applyTranslations(language) {
     const documentType = document.body.dataset.document || "privacy";
-    const copy = { ...commonCopy[language], ...documentCopy[documentType][language] };
+    const copy = { ...commonCopy[language], ...(documentCopy[documentType] || documentCopy.privacy)[language] };
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const value = copy[element.dataset.i18n];
       if (value) element.textContent = value;

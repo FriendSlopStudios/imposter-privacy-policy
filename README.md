@@ -1,6 +1,6 @@
-# Privacy Policy and Terms of Service
+# Privacy Policy, Terms of Service, and Contact
 
-Privacy Policy and Terms of Service for **Imposter: Infiltrator Game** by FriendSlop Studios.
+Privacy Policy, Terms of Service, and support contact page for **Imposter: Infiltrator Game** by FriendSlop Studios.
 
 ## Included languages
 
@@ -10,7 +10,7 @@ Privacy Policy and Terms of Service for **Imposter: Infiltrator Game** by Friend
 - German
 - Brazilian Portuguese
 
-The selected language is kept when moving between the Privacy and Terms pages. It can also be linked directly, for example `index.html?lang=es` or `terms.html?lang=pt-br`.
+The selected language is kept when moving between the Privacy, Terms, and Contact pages. It can also be linked directly, for example `index.html?lang=es`, `terms.html?lang=pt-br`, or `contact/?lang=fr`.
 
 ## Preview locally
 
@@ -26,6 +26,7 @@ Then open `http://localhost:8765/` in a browser. The site is static and can be p
 
 - `index.html` — Privacy Policy in all supported languages
 - `terms.html` — Terms of Service in all supported languages
+- `contact/index.html` — clean `/contact/` support page in all supported languages
 - `styles.css` — shared responsive design and print styles
 - `app.js` — language, theme, navigation, and accessibility behavior
 - `favicon.svg` — browser icon
